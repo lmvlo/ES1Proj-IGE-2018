@@ -12,9 +12,6 @@ public class window {
 
 	private JFrame frame;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void NewScreen() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -28,16 +25,12 @@ public class window {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
+	
 	public window() {
 		initialize();
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1003, 708);
