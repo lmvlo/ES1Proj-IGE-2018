@@ -39,7 +39,7 @@ public class InterfaceGrafico {
 		});
 	}
 
-	/**
+	/**   
 	 * Create the application.
 	 */
 	public InterfaceGrafico() {
