@@ -57,7 +57,7 @@ public class InterfaceGrafico {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				window w= new window();
-				w.NewScreen();
+				window.main();
 			}
 			});
 		

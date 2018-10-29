@@ -2,18 +2,16 @@ package trab;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import javax.swing.JCheckBox;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class window {
-
 	private JFrame frmBda;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -21,22 +19,23 @@ public class window {
 	private JTextField textField_3;
 	private JTextField textField_4;
 
-	public static void NewScreen() {
+	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
-					window window = new window();
-					window.frmBda.setVisible(true);
+					window w = new window();
+					w.frmBda.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-
+ 
 	
-	public window() {
-		initialize();
+		public window() {
+		 initialize();
 	}
 
 	
@@ -62,8 +61,6 @@ public class window {
 		textField_2.setColumns(10);
 		
 		JButton btnNewButton_4 = new JButton("Enviar");
-		
-		JTextPane textPane = new JTextPane();
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Facebook");
 		
@@ -98,7 +95,7 @@ public class window {
 					.addComponent(lblNewLabel_3)
 					.addGap(18)
 					.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(94, Short.MAX_VALUE))
+					.addContainerGap(30, Short.MAX_VALUE))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(41)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
@@ -119,18 +116,15 @@ public class window {
 										.addComponent(lblNewLabel)
 										.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
 										.addComponent(textField, GroupLayout.PREFERRED_SIZE, 207, GroupLayout.PREFERRED_SIZE))
-									.addPreferredGap(ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addGroup(groupLayout.createSequentialGroup()
-											.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 458, GroupLayout.PREFERRED_SIZE)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(btnNewButton_4))
-										.addComponent(textPane, GroupLayout.PREFERRED_SIZE, 460, GroupLayout.PREFERRED_SIZE))
+									.addPreferredGap(ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+									.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 458, GroupLayout.PREFERRED_SIZE)
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addComponent(btnNewButton_4)
 									.addGap(7))))))
 		);
 		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(27)
 					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
@@ -141,14 +135,11 @@ public class window {
 							.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 40, GroupLayout.PREFERRED_SIZE))
 						.addComponent(btnNewButton_3, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
 					.addGap(36)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addComponent(lblNewLabel)
-							.addGap(37)
-							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-							.addGap(70)
-							.addComponent(lblNewLabel_1))
-						.addComponent(textPane, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 183, GroupLayout.PREFERRED_SIZE))
+					.addComponent(lblNewLabel)
+					.addGap(37)
+					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
+					.addGap(70)
+					.addComponent(lblNewLabel_1)
 					.addGap(31)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addGroup(groupLayout.createSequentialGroup()
@@ -166,4 +157,5 @@ public class window {
 		);
 		frmBda.getContentPane().setLayout(groupLayout);
 	}
+	
 }
